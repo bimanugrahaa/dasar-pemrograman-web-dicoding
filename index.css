@@ -1,0 +1,603 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Segoe UI";
+}
+
+/* ----- Navigation ----- */
+nav {
+  color: white;
+  background-color: #000000;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  z-index: 1;
+}
+
+nav ul {
+  float: right;
+  padding: 22px 40px;
+  font-size: 14pt;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+nav ul li a:hover {
+  color: gold;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo h2 a {
+  color: white;
+  float: left;
+  font-size: 24pt;
+  font-weight: bold;
+  padding: 10px 40px;
+  text-decoration: none;
+}
+
+.hamburger {
+  float: right;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  display: none;
+  width: 25px;
+  height: 5px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.5s ease;
+}
+
+/* ----- Jumbotron ----- */
+.jumbotron {
+  width: 100%;
+  height: 1000px;
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+    url(assets/image/jumbotron.jpg);
+  background-size: cover;
+}
+
+.jumbotron_content {
+  padding: 350px 450px 50px 100px;
+  color: white;
+  font-size: 24pt;
+  text-align: start;
+}
+
+.jumbotron_content #p1 {
+  color: gold;
+  font-size: 48pt;
+  font-weight: bold;
+}
+
+.jumbotron_content #p2 {
+  font-size: 32pt;
+}
+
+.jumbotron_content #line {
+  width: 40%;
+  height: 5px;
+  position: relative;
+  background-color: gold;
+  display: block;
+}
+
+.jumbotron_content span {
+  color: gold;
+  font-size: 48pt;
+  font-weight: bold;
+}
+
+/* ----- Category ----- */
+.category_container {
+  padding: 70px 0px;
+  color: white;
+}
+
+.category_container h2 {
+  font-size: 36pt;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+.category {
+  padding-top: 50px;
+  display: flex;
+  overflow: hidden;
+  background-color: white;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_category {
+  display: grid;
+  grid-template-columns: minmax(400px, auto);
+  grid-template-rows: minmax(500px, auto);
+
+  background: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.card_category:hover {
+  box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.8);
+}
+
+.card_category h4 {
+  background-color: black;
+  text-align: center;
+  font-size: 24pt;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.card_category#art {
+  background: url(assets/image/art.jpg);
+  background-size: cover;
+}
+
+.card_category#food {
+  background: url(assets/image/food.jpg);
+  background-size: cover;
+}
+
+.card_category#nature {
+  background: url(assets/image/nature.jpg);
+  background-size: cover;
+}
+
+.card_category#heritage {
+  background: url(assets/image/heritage.jpg);
+  background-size: cover;
+}
+
+/* ----- Post ----- */
+.post_container {
+  background: black;
+  color: white;
+  padding: 50px;
+}
+.post_container h2 {
+  font-size: 36pt;
+  text-align: center;
+  font-weight: bold;
+}
+
+.post {
+  padding-top: 50px;
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_row {
+  transition: 0.5s ease;
+  padding: 20px;
+}
+
+.card_post {
+  display: grid;
+  grid-template-columns: minmax(400px, auto);
+  grid-template-rows: minmax(400px, auto);
+  object-position: center center;
+
+  background: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card_row:hover {
+  transform: scale(1.1);
+}
+
+.card_post#post1 {
+  background: url(assets/image/post1.jpg);
+  background-size: cover;
+}
+
+.card_post#post2 {
+  background: url(assets/image/post2.jpg);
+  background-size: cover;
+}
+
+.card_post#post3 {
+  background: url(assets/image/post3.jpg);
+  background-size: cover;
+}
+
+.card_post#post4 {
+  background: url(assets/image/post4.jpg);
+  background-size: cover;
+}
+
+.card_post#post5 {
+  background: url(assets/image/post5.jpg);
+  background-size: cover;
+}
+
+.card_post#post6 {
+  background: url(assets/image/post6.jpg);
+  background-size: cover;
+}
+
+.card_row h3 {
+  max-width: 400px;
+  overflow-wrap: break-word;
+  cursor: pointer;
+}
+
+.card_row#art h4 {
+  color: skyblue;
+}
+
+.card_row#food h4 {
+  color: tomato;
+}
+
+.card_row#nature h4 {
+  color: green;
+}
+
+.card_row#heritage h4 {
+  color: darksalmon;
+}
+
+/* ----- About ----- */
+.about {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 70px 0px;
+}
+
+.about h1 {
+  font-size: 36pt;
+  position: relative;
+}
+
+.about span {
+  background-color: white;
+}
+
+.about h1::before {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  z-index: -2;
+}
+
+.about h1::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  z-index: -2;
+}
+
+.about h2 {
+  font-size: 20pt;
+  padding: 50px;
+}
+
+.about_container {
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.card_about {
+  display: grid;
+  grid-template-columns: minmax(400px, auto);
+  grid-template-rows: minmax(400px, auto);
+  object-position: center center;
+
+  width: 400px;
+  height: 400px;
+
+  background: white;
+  text-align: center;
+}
+
+.card_about#write {
+  background: url(assets/image/write.png);
+  background-size: cover;
+}
+
+.card_about#share {
+  background: url(assets/image/share.png);
+  background-size: cover;
+}
+
+.card_about#read {
+  background: url(assets/image/read.png);
+  background-size: cover;
+}
+
+.card_about#profile {
+  float: left;
+  background: url(assets/image/profile.jpg);
+  background-size: cover;
+}
+
+.about_column {
+  padding: 20px 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about_column h4 {
+  max-width: 400px;
+  overflow-wrap: break-word;
+  text-align: center;
+  font-size: 18pt;
+}
+
+.about h3 {
+  font-size: 20pt;
+  padding: 20px;
+  color: gold;
+}
+
+.about_content {
+  float: right;
+  margin: 20px;
+  max-width: 400px;
+  text-align: justify;
+}
+
+.about_content h2 {
+  padding: 0px;
+  text-align: left;
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: black;
+}
+
+@media screen and (min-width: 1240px) and (max-width: 1715px) {
+  .card_category {
+    display: flex;
+    flex-basis: 25%;
+    height: 500px;
+  }
+
+  .card_post {
+    display: flex;
+    flex-basis: 33%;
+    height: 400px;
+    margin: 20px;
+  }
+
+  .card_row h3 {
+    margin: 0 0 0 20px;
+  }
+
+  .card_row h4 {
+    margin: 0 0 0 20px;
+  }
+
+  .card_about {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .about_column {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .jumbotron_content {
+    padding: 380px 50px 50px 80px;
+    font-size: 18pt;
+  }
+
+  .jumbotron_content #p1 {
+    font-size: 24pt;
+  }
+
+  .jumbotron_content #p2 {
+    font-size: 20pt;
+  }
+
+  .jumbotron_content span {
+    font-size: 24pt;
+  }
+
+  .category {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .card_category {
+    width: 60%;
+    text-align: center;
+    margin: 20px 100px;
+  }
+
+  .post {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card_post {
+    display: grid;
+    width: 670px;
+    height: 670px;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+
+  .card_row h3 {
+    max-width: 100%;
+    padding: 0px 200px;
+  }
+
+  .card_row h4 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    padding: 0px 100px;
+  }
+
+  .about_container {
+    flex-direction: column;
+  }
+
+  .about_column {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    border-style: solid;
+    border-width: thin;
+  }
+
+  .about_column h3 {
+    padding: 0px;
+  }
+
+  .about_column h4 {
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .about_column#profile {
+    border-style: none;
+  }
+
+  .card_about {
+    width: 500px;
+    height: 500px;
+    margin: 20px;
+  }
+
+  .card_about#profile {
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .about_content {
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 500px;
+    display: inline-block;
+  }
+
+  .about_content h2 {
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 922px) {
+  body {
+    overflow-x: hidden;
+  }
+  nav ul {
+    position: absolute;
+    right: 0px;
+    height: 1000vh;
+    top: 6vh;
+    padding: 22px 40px;
+    font-size: 14pt;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  nav ul li {
+    margin: 40px 0;
+    opacity: 100;
+  }
+
+  .hamburger div {
+    display: block;
+  }
+
+  .jumbotron {
+    width: 910px;
+  }
+
+  .category_container {
+    width: 910px;
+  }
+
+  .post_container {
+    width: 910px;
+  }
+
+  .about {
+    width: 910px;
+  }
+
+  footer {
+    width: 910px;
+  }
+}
+
+/* ----- Navigation action ----- */
+.nav-action {
+  transform: translateX(0%);
+}
+
+/* ----- For Hamburger Navigation Animation ----- */
+.hamburger_animation .line1 {
+  transform: rotate(-45deg) translate(-5px, 9px);
+}
+
+.hamburger_animation .line2 {
+  opacity: 0;
+}
+
+.hamburger_animation .line3 {
+  transform: rotate(45deg) translate(-5px, -9px);
+}
